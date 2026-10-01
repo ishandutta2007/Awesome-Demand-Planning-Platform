@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    
+    <!-- Title Gradient -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Accent Gradient for Line Graph -->
+    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="1"/>
+    </linearGradient>
+    
+    <linearGradient id="area-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 46px; fill: url(#title-grad); }
+    .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; }
+    .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 13px; fill: #e2e8f0; }
+    
+    /* CSS Animations for Dynamic Aspects */
+    @keyframes pulse-wave {
+      0% { transform: translateY(0px); opacity: 0.4; }
+      50% { transform: translateY(-8px); opacity: 0.8; }
+      100% { transform: translateY(0px); opacity: 0.4; }
+    }
+
+    @keyframes float-pill {
+      0% { transform: translateX(0px); }
+      50% { transform: translateX(15px); }
+      100% { transform: translateX(0px); }
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -100;
+      }
+    }
+
+    .animated-wave { animation: pulse-wave 4s ease-in-out infinite; }
+    .animated-pill { animation: float-pill 6s ease-in-out infinite; }
+    .moving-grid { stroke-dasharray: 8 8; animation: dash 20s linear infinite; }
+  </style>
+
+  <!-- Base Card Container -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" stroke="#334155" stroke-width="2"/>
+
+  <!-- Background Dynamic Graph / Grid (Kept behind foreground text) -->
+  <g opacity="0.25">
+    <path d="M 50,280 L 1150,280 M 50,220 L 1150,220 M 50,160 L 1150,160 M 50,100 L 1150,100" stroke="#475569" stroke-width="1" class="moving-grid"/>
+  </g>
+
+  <!-- Area Graph Fill (Dynamic Background Visualization) -->
+  <path d="M 50 280 Q 250 220, 450 240 T 850 140 T 1150 110 L 1150 300 L 50 300 Z" fill="url(#area-grad)" class="animated-wave"/>
+  <path d="M 50 280 Q 250 220, 450 240 T 850 140 T 1150 110" fill="none" stroke="url(#line-grad)" stroke-width="4" filter="url(#glow)"/>
+
+  <!-- Floating Dynamic Pills (Visual Elements positioned gracefully) -->
+  <g class="animated-pill" opacity="0.85">
+    <rect x="820" y="50" width="160" height="36" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="840" cy="68" r="6" fill="#38bdf8"/>
+    <text x="856" y="73" class="badge-text">AI Forecasting</text>
+
+    <rect x="995" y="50" width="155" height="36" rx="18" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+    <circle cx="1015" cy="68" r="6" fill="#818cf8"/>
+    <text x="1031" y="73" class="badge-text">S&amp;OP Planning</text>
+
+    <rect x="900" y="100" width="220" height="36" rx="18" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+    <circle cx="920" cy="118" r="6" fill="#c084fc"/>
+    <text x="936" y="123" class="badge-text">Inventory Optimization</text>
+  </g>
+
+  <!-- Foreground Header Text & Subtitle (Always in front and perfectly readable) -->
+  <g transform="translate(60, 130)">
+    <!-- Main Title -->
+    <text x="0" y="0" class="title">Awesome Demand Planning Platform</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="42" class="subtitle">Curated Ecosystem of Enterprise SaaS &amp; Open-Source Supply Chain Tools</text>
+
+    <!-- Stat/Category Badges -->
+    <g transform="translate(0, 90)">
+      <rect x="0" y="0" width="160" height="32" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <text x="16" y="21" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#38bdf8">📦 Demand Sensing</text>
+
+      <rect x="175" y="0" width="175" height="32" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <text x="191" y="21" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#818cf8">📊 Safety Stock &amp; EOQ</text>
+
+      <rect x="365" y="0" width="180" height="32" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <text x="381" y="21" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#c084fc">⚡ Real-time Analytics</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Border -->
+  <rect x="0" y="354" width="1200" height="6" fill="url(#title-grad)"/>
+</svg>
