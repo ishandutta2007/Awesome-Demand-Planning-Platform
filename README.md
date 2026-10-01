@@ -1,193 +1,105 @@
-# Awesome-Demand-Planning-Platform
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Demand Planning Platform Banner" width="100%" />
+</p>
 
-## Top Demand Planning Platforms Ecosystem
+# Awesome Demand Planning Platform 📈 Supply Chain & Forecasting Ecosystem
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Demand-Planning-Platform"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Demand-Planning-Platform?style=flat-square&color=yellow" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Demand-Planning-Platform/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Demand-Planning-Platform?style=flat-square&color=blue" alt="GitHub Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Demand-Planning-Platform/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Demand-Planning-Platform?style=flat-square&color=green" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
+**Curated List of Enterprise SaaS Products & Open-Source GitHub Projects**
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**
+*Focused on Demand Forecasting, Inventory Optimization, Sales & Operations Planning (S&OP), Distribution Resource Planning (DRP), and Supply Chain Intelligence.*
 
-*Focused on Demand Forecasting, Inventory Optimization, S&OP & Supply Chain Planning*
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Demand Planning**. These tools help supply chain teams forecast demand, optimize inventory levels, and align sales and operations planning (S&OP).
-
-
-
-**Examples** include Anaplan, RELEX Solutions, Blue Yonder, o9 Solutions, ToolsGroup, Kinaxis, River Logic, FuturMaster, Gains Systems, Logility, Netstock, and Lokad (the category leaders).
-
-
-
-**Open-source emphasis**: Demand planning has a **focused open-source ecosystem**. **planr** is the most mature open-source R package for demand planning, providing DRP (Distribution Requirement Planning), projected inventories, coverage calculations, and constrained demand functions . **Advanced Demand Forecasting and Inventory Optimization** provides a complete Python-based system with multiple forecasting models (SES, Holt's, Holt-Winters), EOQ, safety stock, and a Streamlit dashboard . This section documents these focused solutions honestly—the open-source ecosystem remains significantly behind commercial platforms in ML sophistication and enterprise integration.
-
-
-
-Contributions welcome! Open an Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Anaplan](https://www.anaplan.com/)**  
-
-  Cloud-based planning platform for connected planning across finance, supply chain, and sales. Uses in-memory OLAP architecture for rapid model recalculation and multi-dimensional planning. **Note**: Exclusively cloud-based; no on-premises deployment option .
-
-
-
-- **[RELEX Solutions](https://www.relexsolutions.com/)**  
-
-  Unified supply chain and retail planning platform. Provides demand forecasting, merchandise planning, supply chain optimization, and operations planning for retailers and consumer brands .
-
-
-
-- **[Blue Yonder](https://blueyonder.com/)**  
-
-  AI-powered supply chain orchestration platform. Provides demand planning, inventory optimization, S&OP, and logistics management with patented algorithms covering every sales pattern from slow-moving to highly seasonal .
-
-
-
-- **[o9 Solutions](https://o9solutions.com/)**  
-
-  AI-powered integrated business planning platform. Provides real-time data for supply chain decisions across demand, supply, inventory, and S&OP .
-
-
-
-- **[ToolsGroup](https://www.toolsgroup.com/)**  
-
-  Supply chain planning and optimization software. Provides demand forecasting, operations planning, demand sensing, and data unification. Known for probabilistic forecasting and Monte Carlo simulation for safety stock optimization .
-
-
-
-- **[Kinaxis](https://www.kinaxis.com/)**  
-
-  AI-powered supply chain orchestration platform for end-to-end planning. Provides demand, supply, inventory, S&OP, and logistics management with rapid response capabilities .
-
-
-
-- **[Netstock](https://www.netstock.com/)**  
-
-  Cloud-based inventory and demand planning solution that integrates with ERPs. Provides AI-powered demand forecasting, inventory optimization, and insights to avoid stockouts while reducing tied-up capital. **Note**: Certified on Microsoft AppSource, integrates with Dynamics 365 Business Central and other ERPs .
-
-
-
-- **[Lokad](https://www.lokad.com/)**  
-
-  Quantitative supply chain optimization platform. Provides demand forecasting and inventory optimization with a focus on ROI-driven probabilistic forecasting and parts optimization .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Demand Planning & Inventory Optimization Frameworks
-
-
-
-- **[planr](https://github.com/nikonguyen/planr)**  
-
-  **The most mature open-source R package for demand and supply planning.** Provides comprehensive **DRP (Distribution Requirement Planning)** functionality. **Key features**: `drp()` function calculates Replenishment Plans with projected inventories and coverages; `inv_to_cov()` converts projected inventories to projected coverage in periods; `const_dmd()` calculates constrained demand based on projected inventory availability; `proj_git()` projects Goods In Transit with ETA/ETD tracking . **Input requirements**: Just 5 key features—a DFU (item × location), Period (weekly/monthly buckets), Demand (quantity planned to be consumed), Opening Inventory (units at horizon start), and Supply Plan . **Frozen/Free Horizon** parameter supports production plan consideration. **Installation**: `install.packages("planr")`. **Best for**: Supply chain analysts and data scientists needing a lightweight, code-based DRP engine.
-
-
-
-- **[Advanced Demand Forecasting and Inventory Optimization](https://github.com/Malay19/Advanced-Demand-Forecasting-and-Inventory-Optimization-Using-Machine-Learning)**  
-
-  **Complete end-to-end Python solution for demand forecasting and inventory optimization.** **Key features**: Multiple forecasting models—**Simple Exponential Smoothing (SES)**, **Holt's Linear Trend**, and **Holt-Winters Seasonal**—with automatic model selection per SKU based on accuracy metrics (MAPE, RMSE); **Inventory optimization** calculates EOQ, Safety Stock, and Reorder Points considering demand and lead time variability; **KPI reporting** for Inventory Turnover, Fill Rate, Days of Supply, and SKU Risk Levels; **Interactive Streamlit dashboard** with forecasting charts, inventory optimization views, order recommendations, and simulation tools . **Tech stack**: Python, Pandas, NumPy, Statsmodels, Plotly, Streamlit. **Outputs**: CSV files for inventory results, demand forecasts, model metrics, and KPI summaries. **Best for**: Python developers and data scientists wanting a complete demand planning toolkit.
-
-
-
-### Machine Learning Forecasting Approaches
-
-
-
-- **[Prophet (Meta)](https://github.com/facebook/prophet)**  
-
-  Open-source forecasting tool from Meta. Handles seasonality, holidays, and missing data robustly. **Best for**: Business time-series forecasting with interpretable results. Works well for campaign metrics with strong weekly/monthly seasonality .
-
-
-
-- **[Statsmodels SARIMA](https://github.com/statsmodels/statsmodels)**  
-
-  Statistical forecasting with Seasonal ARIMA models. **Best for**: Regular seasonal patterns where simpler models outperform complex ones. Email open rates show stable weekly patterns (Tuesday morning opens 23% higher than Friday afternoon) where SARIMA performs well .
-
-
-
-- **[XGBoost](https://github.com/dmlc/xgboost)**  
-
-  Gradient boosting for demand forecasting with external features. **Best for**: Forecasts correlating with fuel prices, model releases, competitor pricing, weather, and marketing spend. **Ensemble approach**: Averaging Prophet, SARIMA, and XGBoost predictions with weights based on holdout performance often outperforms any single model .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **DRP & Supply Planning**: **planr** (R package, DRP, projected inventories, constrained demand) .
-
-- **Demand Forecasting**: **Advanced Demand Forecasting** (Python, SES/Holt-Winters, EOQ, Streamlit dashboard) .
-
-- **Time Series Models**: **Prophet** (Meta, seasonality handling), **Statsmodels SARIMA** (statistical forecasting), **XGBoost** (external features, ensemble) .
-
-- **ERP Foundations**: **Odoo** (open-source ERP with inventory and manufacturing modules adaptable for demand planning) .
-
-
-
-**Frameworks for building custom systems**: Combine **planr** for DRP and replenishment planning, **Advanced Demand Forecasting** for ML-based forecasting with EOQ and safety stock, **Prophet** or **XGBoost** for time-series forecasting with external features, and **Odoo** for ERP integration. Add **PostgreSQL** for persistence and **Docker** for deployment.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Demand planning platforms handle sensitive supply chain and financial data; ensure proper access controls and compliance with data protection regulations.
-
-- **Open-source reality**: The open-source ecosystem for demand planning is **focused but limited compared to commercial platforms**. **planr** provides a mature R-based DRP engine with projected inventories and constrained demand . **Advanced Demand Forecasting** offers a complete Python toolkit with multiple forecasting models and inventory optimization . However, **commercial platforms** (Anaplan, RELEX, Blue Yonder, o9 Solutions, Kinaxis) provide **enterprise-grade ML sophistication, real-time data integration, multi-echelon optimization, and integrated S&OP workflows** that open-source alternatives cannot match without significant development. The open-source path is most viable for **specific DRP calculations, forecasting model experimentation, or organizations with strong data science capacity** seeking lightweight alternatives.
-
-
+**Last updated: October 2026** 📅
 
 ---
 
+## 📌 Table of Contents
+- [🏢 SaaS & Enterprise Hosted Platforms](#-saas--enterprise-hosted-platforms)
+- [🔓 Open-Source GitHub Frameworks & Libraries](#-open-source-github-frameworks--libraries)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
 
+---
 
-**Made for supply chain analysts, demand planners, inventory managers, and data scientists.**
+## 🏢 SaaS & Enterprise Hosted Platforms
 
-Let's make demand planning more open, transparent, and data-driven.
+> 💡 **Market Size & Industry Dynamics:** The global **Demand Planning & Supply Chain Management (SCM) Software Market** is estimated at **$28.5 Billion** and is projected to reach **$52.4 Billion by 2030** (CAGR ~10.4%). The sector is **moderately fragmented**, featuring established enterprise leaders (e.g., Blue Yonder, Kinaxis, Anaplan) alongside specialized vertical AI innovators (e.g., RELEX, o9 Solutions).
+
+Below is a comparison of top enterprise SaaS demand planning platforms sorted by company scale (revenue/valuation descending):
+
+| Platform / Vendor | Company Size (Valuation / Revenue) 💰 | Starting Pricing Tier 🏷️ | Free Tier / Trial Limits ⏳ | Key Capabilities & Highlights 🚀 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Blue Yonder](https://blueyonder.com/)** | **~$1.3B Revenue** (Acquired by Panasonic) | ~$100,000 / year (Enterprise Quote) | No free trial; interactive demo requests only | AI-powered supply chain orchestration, machine learning demand sensing, and probabilistic seasonal pattern forecasting. |
+| **[Anaplan](https://www.anaplan.com/)** | **~$1.0B Revenue** (Privatized by Thoma Bravo) | ~$30,000 – $50,000 / year | 90-day free trial limited exclusively to Anaplan Academy certified model builders | Connected enterprise planning platform with in-memory Hyperblock OLAP calculation engine across finance and supply chain. |
+| **[Kinaxis](https://www.kinaxis.com/)** | **~$856M Revenue** (Public: TSX:KXS) | ~$75,000 / year (Enterprise Quote) | No free trial; live sandbox demos available for qualified enterprise buyers | RapidResponse platform providing real-time concurrent planning, scenario modeling, and supply chain risk response. |
+| **[o9 Solutions](https://o9solutions.com/)** | **$3.7B Valuation** (~$700M ARR) | ~$100,000 / year (Enterprise Tier) | No free trial; customized enterprise proof-of-concept (PoC) demos | Digital Brain enterprise AI platform with graph-based supply chain master data and integrated S&OP modeling. |
+| **[RELEX Solutions](https://www.relexsolutions.com/)** | **$5.7B Valuation** (~€400M Revenue) | ~$50,000 / year (Store/DC scale based) | No free trial; customized pilot evaluation program | Unified retail and consumer goods demand forecasting, space planning, and replenishment optimization. |
+| **[ToolsGroup](https://www.toolsgroup.com/)** | **~$62M Revenue** (Backed by Accel-KKR) | ~$35,000 / year (Standard Tier) | No free trial; guided sandbox environment available upon quote | Service Optimizer 99+ (SO99+) featuring probabilistic demand forecasting and automated safety stock calculations. |
+| **[Netstock](https://www.netstock.com/)** | **~$17.6M ARR** (SMB ERP Specialist) | ~$400 / month (Annual SaaS commitment) | No free trial; 30-minute ERP-connected live demo | Cloud inventory & demand planning seamlessly integrated with Dynamics 365, NetSuite, SAP Business One, and Quickbooks. |
+| **[Lokad](https://www.lokad.com/)** | **~$10M Revenue** (Quantitative Supply Chain) | ~$2,500 / month (6-month commitment minimum) | No free trial; custom sample dataset analysis during consultation | ROI-driven quantitative supply chain planning, probabilistic forecasting, and programmatic inventory optimization. |
+
+---
+
+## 🔓 Open-Source GitHub Frameworks & Libraries
+
+The open-source ecosystem provides powerful code-based models, specialized algorithms, and full-stack applications for demand forecasting and inventory replenishment. 
+
+Below are top open-source projects sorted by GitHub stars ⭐ (descending):
+
+| Project / Repository | Star Count 🌟 | Primary Category 🏷️ | Key Features & Architecture ⚡ |
+| :--- | :--- | :--- | :--- |
+| **[Odoo](https://github.com/odoo/odoo)** | [![GitHub stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | ERP & Supply Chain Base | Modular Python/JS business platform with comprehensive inventory management, MRP, and demand replenishment rules. |
+| **[XGBoost](https://github.com/dmlc/xgboost)** | [![GitHub stars](https://img.shields.io/github/stars/dmlc/xgboost?style=social&color=white)](https://github.com/dmlc/xgboost/stargazers) | Gradient Boosting ML | Scalable gradient boosting library widely utilized in Kaggle supply chain challenges for demand forecasting with external covariates (promotions, weather, holidays). |
+| **[Prophet](https://github.com/facebook/prophet)** | [![GitHub stars](https://img.shields.io/github/stars/facebook/prophet?style=social&color=white)](https://github.com/facebook/prophet/stargazers) | Time Series Forecasting | Meta's additive forecasting model optimized for daily/weekly business metrics with strong seasonality and holiday effects. |
+| **[Statsmodels](https://github.com/statsmodels/statsmodels)** | [![GitHub stars](https://img.shields.io/github/stars/statsmodels/statsmodels?style=social&color=white)](https://github.com/statsmodels/statsmodels/stargazers) | Statistical Modeling | Python module offering SARIMAX, Exponential Smoothing, and econometrics time-series forecasting primitives. |
+| **[sktime](https://github.com/sktime/sktime)** | [![GitHub stars](https://img.shields.io/github/stars/sktime/sktime?style=social&color=white)](https://github.com/sktime/sktime/stargazers) | Unified ML Framework | Unified framework for time series machine learning in Python, enabling reduction of forecasting to scikit-learn regressors. |
+| **[Darts](https://github.com/unit8co/darts)** | [![GitHub stars](https://img.shields.io/github/stars/unit8co/darts?style=social&color=white)](https://github.com/unit8co/darts/stargazers) | Python Time Series Library | User-friendly Python library for forecasting and anomaly detection ranging from ARIMA to deep learning models (N-BEATS, TFT). |
+| **[StatsForecast](https://github.com/Nixtla/statsforecast)** | [![GitHub stars](https://img.shields.io/github/stars/Nixtla/statsforecast?style=social&color=white)](https://github.com/Nixtla/statsforecast/stargazers) | High-Performance Forecasting | Lightning-fast statistical time series models (AutoARIMA, ETS) optimized for large-scale SKU-level demand forecasting. |
+| **[NeuralForecast](https://github.com/Nixtla/neuralforecast)** | [![GitHub stars](https://img.shields.io/github/stars/Nixtla/neuralforecast?style=social&color=white)](https://github.com/Nixtla/neuralforecast/stargazers) | Deep Learning Forecasting | PyTorch-based collection of state-of-the-art neural forecasting architectures (NHITS, Informer, PatchTST) for complex demand patterns. |
+| **[frePPLe](https://github.com/frePPLe/frepple)** | [![GitHub stars](https://img.shields.io/github/stars/frePPLe/frepple?style=social&color=white)](https://github.com/frePPLe/frepple/stargazers) | Open Supply Chain Planning | Dedicated open-source demand forecasting, inventory planning, and production scheduling application written in C++/Python. |
+| **[planr](https://github.com/nikonguyen/planr)** | [![GitHub stars](https://img.shields.io/github/stars/nikonguyen/planr?style=social&color=white)](https://github.com/nikonguyen/planr/stargazers) | R DRP & Supply Planning | R package for Distribution Requirement Planning (DRP), converting inventory into projected coverage and constrained demand. |
+| **[Advanced Demand Forecasting](https://github.com/Malay19/Advanced-Demand-Forecasting-and-Inventory-Optimization-Using-Machine-Learning)** | [![GitHub stars](https://img.shields.io/github/stars/Malay19/Advanced-Demand-Forecasting-and-Inventory-Optimization-Using-Machine-Learning?style=social&color=white)](https://github.com/Malay19/Advanced-Demand-Forecasting-and-Inventory-Optimization-Using-Machine-Learning/stargazers) | End-to-End Streamlit App | Complete Python solution implementing SES, Holt-Winters, EOQ, safety stock formulas, and interactive Streamlit web dashboard. |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Help us maintain the most comprehensive guide to demand planning software 🚀:
+
+1. 🍴 **Fork** this repository.
+2. 📝 Add or update entries in `README.md` following the table schema.
+3. 🔎 Ensure all company figures, pricing specs, and repository star links are factual.
+4. 📬 Submit a **Pull Request** with a concise description of your changes.
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find this curated list valuable for your business, data science research, or supply chain architecture, please consider supporting the maintenance of this repository! ☕
+
+- ⭐ **Star this repository** to show your appreciation.
+- 🍴 **Fork & Share** it with colleagues and supply chain practitioners.
+- ☕ **Sponsor the Author**: Support further open-source research via [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Demand-Planning-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Demand-Planning-Platform&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository is a **community-curated list** intended for informational and educational purposes.
+- Demand planning systems process mission-critical corporate financial and inventory data; always perform thorough security assessments before deployment.
+- Product logos, trademarks, and brand names belong to their respective owners.
